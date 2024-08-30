@@ -39,10 +39,26 @@ function App() {
             type="text"
             value={password}
             placeholder="password"
-           readOnly           
+            readOnly
           />
-          <button className="outline-none bg-blue-700 text-white 
-          px-3 py-0.5 shrink-0">Copy</button>
+          <button
+            className="outline-none bg-blue-700 text-white 
+          px-3 py-0.5 shrink-0"
+          >
+            Copy
+          </button>
+        </div>
+        <div className="flex text-sm gap-x-2">
+          <div className="flex items-center gap-x-1">
+            <input
+              className="cursor-pointer"
+              type="range"
+              min={6}
+              max={50}
+              value={length}
+            />
+            <label>Length: {length}</label>
+          </div>
         </div>
       </div>
     </>
