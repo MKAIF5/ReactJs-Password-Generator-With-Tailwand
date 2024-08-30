@@ -5,7 +5,7 @@ function App() {
   const [numberAllow, setNumberAllow] = useState(false);
   const [charAllow, setCharAllow] = useState(false);
   const [password, setPassword] = useState("");
-
+  const passwordRef = useRef(null);
   const passwordGenerator = () => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -30,9 +30,7 @@ function App() {
 
   return (
     <>
-      <div
-        className="w-full max-w-md mx-auto shadow-md rounded-lg mt-8 px-3 py-3 text-orange-500 bg-slate-700"
-      >
+      <div className="w-full max-w-md mx-auto shadow-md rounded-lg mt-8 px-3 py-3 text-orange-500 bg-slate-700">
         <h1 className="text-white text-center">Password Generator</h1>
         <div className="flex shadow rounded-lg overflow-hidden mb-4 my-3">
           <input
