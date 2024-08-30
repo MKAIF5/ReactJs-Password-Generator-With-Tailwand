@@ -16,11 +16,15 @@ function App() {
       }
 
       if (charAllow) {
-        str = "!@#$%^&*(){}[]<>|";
+        str = "!@#$%^&*(){}[]<>|`~";
       }
 
-      pass = Math.floor(Math.random() * str + 1);
+      for (let i = 1; i <= array.length; i++) {
+        let char = Math.floor(Math.random() * str.length + 1);
+        pass = str.charAt(char)
+      }
     }, [length, numberAllow, charAllow, setPassword]);
+    
   return (
     <>
       <h1 className="text-white text-center text-5xl mt-3">
