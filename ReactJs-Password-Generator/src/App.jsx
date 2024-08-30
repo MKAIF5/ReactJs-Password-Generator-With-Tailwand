@@ -5,7 +5,6 @@ function App() {
   const [numberAllow, setNumberAllow] = useState(false);
   const [charAllow, setCharAllow] = useState(false);
   const [password, setPassword] = useState("");
-  const passwordRef = useRef(null);
   const passwordGenerator = () => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
